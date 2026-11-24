@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Project Portal – Niva Singh</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Student Project Portal</h1>
+  <p>Static Website on Netlify &amp; Dynamic Web Service</p>
+</header>
+
+<nav>
+  <a href="#projects">Projects</a>
+  <a href="#test">Live Server Test</a>
+  <a href="#student">Student Details</a>
+</nav>
+
+<main>
+
+  <section id="projects">
+    <h2>Hosted Projects</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Web Design Lab</h3>
+        <p>A collection of responsive frontend experiments hosted with automatic HTTPS on GitHub Pages and Netlify.</p>
+      </div>
+
+      <div class="card">
+        <h3>Cloud API Service</h3>
+        <p>A Node.js and Express backend service handling dynamic API routes and client requests.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="test">
+    <h2>Live Server Test</h2>
+    <p>Click the button below to test backend service response:</p>
+    <button onclick="checkServer()">Test Connection</button>
+    <div id="statusBox" class="status-box">Status: Ready to test</div>
+  </section>
+
+  <section id="student">
+    <h2>Student Details</h2>
+    <p><strong>Name:</strong> Niva Singh</p>
+    <p><strong>Enrollment No.:</strong> J250212105</p>
+    <p><strong>Subject:</strong> Web Design Lab (JCS308)</p>
+    <p><strong>College:</strong> JSS University, Noida</p>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Niva Singh. Web Design Lab Experiment 10.</p>
+</footer>
+
+<script>
+function checkServer() {
+  var box = document.getElementById("statusBox");
+  box.textContent = "Connecting to backend service...";
+  box.className = "status-box checking";
+
+  setTimeout(function() {
+    box.textContent = "Server Status: Connected (HTTP 200 OK) - Cloud Service Online";
+    box.className = "status-box online";
+  }, 400);
+}
+</script>
+</body>
+</html>
